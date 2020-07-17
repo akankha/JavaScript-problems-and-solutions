@@ -31,6 +31,30 @@ function woodCalculator(bed, table, chair) {
 
 }
 
+// this function will give you total number to wood require
+function brickCalculator(floor) {
+
+    var upTotenFloor = 10
+    var upTotweentyFloor = 20
+
+    if (floor <= 10) {
+        var totalBrick = floor * 15 * 1000;
+
+    } else if (floor > 10 && floor <= 20) {
+        floor = floor - upTotenFloor;
+        totalBrick = (floor * 12 * 1000) + 150000;
+    } else {
+        floor = floor - upTotweentyFloor;
+        totalBrick = (floor * 10 * 1000) + 270000;
+    }
+    return totalBrick;
+
+
+}
+
+
+// this function will give you total number to wood require
+
 function tinyFiend(friend) {
 
     // Check whither this is a array or not
@@ -43,16 +67,16 @@ function tinyFiend(friend) {
         // Take friend as smallest number
         var tinyFiend = friend [0];
 
-        for (i = 1; i < friend.length ; i++) {
+        for (i = 1; i < friend.length; i++) {
 
-             var currentFriend = friend[i];
-             // compare is the anyother name which are less then tinyfriend
+            var currentFriend = friend[i];
+            // compare is the anyother name which are less then tinyfriend
             if (currentFriend.length < tinyFiend.length) {
                 tinyFiend = currentFriend;
             }
 
         }
-         return tinyFiend;
+        return tinyFiend;
     }
 
 }
